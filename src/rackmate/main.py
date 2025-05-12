@@ -3,9 +3,16 @@ from dataclasses import replace
 from rackmate.defaults import default_params
 from rackmate.geometry import sketch_cover
 from rackmate.model import Params, FanType, ScrewHolePattern
+from pathlib import Path
 
-def main(params: Params = default_params) -> cq.Workplane:
+
+def top_panel(params: Params = default_params) -> cq.Workplane:
     return cq.Workplane("XY").add(sketch_cover(params)).extrude(params.height)
+
+
+def export(directory: str, filename: str, shape: cq.Workplane) -> None:
+    Path(directory).mkdir(parents=True, exist_ok=True)
+    cq.exporters.export(shape, f"{directory}/{filename}")
 
 
 overridden = replace(
@@ -21,11 +28,10 @@ overridden = replace(
     ),
 )
 
-result = main(overridden)
+result = top_panel(overridden)
 
 # Render the solid
 # show_object(result, name="box")  # type: ignore  # noqa: F821
 
 # Export
-cq.exporters.export(result, "rackmate-top.stl")
-cq.exporters.export(result, "rackmate-top.step")
+export("../../assets/outputs/rackmate", "top-panel.stl", result)
