@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.envrc*": "shellscript",
+    "devbox.json": "json5"
+  }
+}
