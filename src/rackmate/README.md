@@ -11,3 +11,9 @@ To generate a new output / stl run `devbox run rackmate:generate`, the outputs c
 [Product Context](https://deskpi.com/products/deskpi-rackmate-t1-2#3)
 
 ![package included](/assets/images/package-included.png)
+
+### Issues
+
+- Lack of fan grill selections (currently 1 option only)
+- Output is too large for most printers (280mm), and it should be broken down into more manageable sections
+- Lack of testing (yet to print this model as its too large for my printer)
