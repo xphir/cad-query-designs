@@ -10,7 +10,7 @@ To generate a new output / stl run `devbox run rackmate:generate`, the outputs c
 
 [Product Context](https://deskpi.com/products/deskpi-rackmate-t1-2#3)
 
-![package included](../../assets/images/package-included.png)
+![package included](/assets/images/package-included.png)
 
 ### Issues
 
