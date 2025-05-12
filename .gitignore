@@ -45,3 +45,6 @@ dist/
 # Devbox environments
 devbox.lock
 .devbox
+
+# assets
+!assets/outputs/**/*.stl
