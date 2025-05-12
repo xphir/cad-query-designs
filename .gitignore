@@ -48,3 +48,4 @@ devbox.lock
 
 # assets
 !assets/outputs/**/*.stl
+!assets/images
