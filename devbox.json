@@ -6,8 +6,8 @@
   },
   "shell": {
     "init_hook": [". $VENV_DIR/bin/activate"],
-  },
-  "scripts": {
-    "pip_install": "pip install -r requirements.txt"
+    "scripts": {
+      "pip_install": "pip install -r requirements.txt"
+    }
   }
 }
